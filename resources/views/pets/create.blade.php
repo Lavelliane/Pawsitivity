@@ -11,10 +11,14 @@
                         <p class="text-base font-medium leading-none text-gray-800">
                             Name
                         </p>
-                        <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="name"/>
+                        <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                            name="name" />
                         <p class="mt-3 text-xs leading-[15px] text-gray-600">
                             What's the name your pet?
                         </p>
+                        @error('name')
+                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div>
@@ -22,74 +26,104 @@
                         <p class="text-base font-medium leading-none text-gray-800">
                             Breeds
                         </p>
-                        <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="breeds"/>
+                        <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                            name="breeds" />
                         <p class="mt-3 text-xs leading-[15px] text-gray-600">
                             State the breeds in a comma separated list e.g. Labrador, German Shepherd
                         </p>
+                        @error('breeds')
+                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Species
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="species"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="species" />
                     <p class="mt-3 text-xs leading-3 text-gray-600">
                         Is it a dog? a cat? or an alien?
                     </p>
+                    @error('species')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Age
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="age"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="age" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         How old is your Fur baby?
                     </p>
+                    @error('age')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Size
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="size"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="size" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Describe the body frame e.g. Small, Large
                     </p>
+                    @error('size')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Image
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" type="file" name="petImg"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        type="file" name="petImg" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Show us how cute your fur baby is!
                     </p>
+
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Email
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="email"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="email" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Contact Email
                     </p>
+                    @error('email')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Website
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="website"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="website" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Link to shelter website, Facebook page or any relevant social network
                     </p>
+                    @error('website')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
                     <p class="text-base font-medium leading-none text-gray-800">
                         Phone
                     </p>
-                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" name="phone"/>
+                    <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                        name="phone" />
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Contact Phone Number
                     </p>
+                    @error('phone')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
             </div>
 
@@ -101,6 +135,9 @@
                     <textarea class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"
                         placeholder="Start typing here ..." name="description"></textarea>
                 </div>
+                @error('description')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
             </div>
             <p class="mt-3 text-xs leading-[15px] text-gray-600 px-7">
                 Enter pet description for better understanding
