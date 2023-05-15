@@ -10,7 +10,7 @@ class Pet extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'petImg', 'breeds', 'species', 'age','size','email', 'user_id', 'website', 'phone', 'description', 'user_id'];
+    protected $fillable = ['name', 'breeds', 'species', 'age','size','email', 'user_id', 'website', 'phone', 'description', 'petImg'];
 
     public function scopeFilter($query, array $filters){
         if($filters['breed'] ?? false){

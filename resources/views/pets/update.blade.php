@@ -3,8 +3,9 @@
         <p class="text-xl font-semibold leading-tight text-gray-800">
             Pet Details
         </p>
-        <form action="/pets" method="POST" enctype="multipart/form-data">
+        <form action="/pets/{{$pet->id}}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="grid w-full grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-7 mt-7">
                 <div>
                     <div>
@@ -12,7 +13,7 @@
                             Name
                         </p>
                         <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                            name="name" />
+                            name="name" value="{{$pet->name}}"/>
                         <p class="mt-3 text-xs leading-[15px] text-gray-600">
                             What's the name your pet?
                         </p>
@@ -27,7 +28,7 @@
                             Breeds
                         </p>
                         <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                            name="breeds" />
+                            name="breeds" value="{{$pet->breeds}}"/>
                         <p class="mt-3 text-xs leading-[15px] text-gray-600">
                             State the breeds in a comma separated list e.g. Labrador, German Shepherd
                         </p>
@@ -41,7 +42,7 @@
                         Species
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="species" />
+                        name="species" value="{{$pet->species}}"/>
                     <p class="mt-3 text-xs leading-3 text-gray-600">
                         Is it a dog? a cat? or an alien?
                     </p>
@@ -54,7 +55,7 @@
                         Age
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="age" />
+                        name="age" value="{{$pet->age}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         How old is your Fur baby?
                     </p>
@@ -67,7 +68,7 @@
                         Size
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="size" />
+                        name="size" value="{{$pet->size}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Describe the body frame e.g. Small, Large
                     </p>
@@ -80,7 +81,7 @@
                         Image
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        type="file" name="petImg" />
+                        type="file" name="petImg" value="{{$pet->petImg}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Show us how cute your fur baby is!
                     </p>
@@ -91,7 +92,7 @@
                         Email
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="email" />
+                        name="email" value="{{$pet->email}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Contact Email
                     </p>
@@ -104,7 +105,7 @@
                         Website
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="website" />
+                        name="website" value="{{$pet->website}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Link to shelter website, Facebook page or any relevant social network
                     </p>
@@ -117,7 +118,7 @@
                         Phone
                     </p>
                     <input class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
-                        name="phone" />
+                        name="phone" value="{{$pet->phone}}"/>
                     <p class="mt-3 text-xs leading-[15px] text-gray-600">
                         Contact Phone Number
                     </p>
@@ -133,7 +134,7 @@
                 </p>
                 <div class="mt-10 border border-gray-300 rounded">
                     <textarea class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"
-                        placeholder="Start typing here ..." name="description"></textarea>
+                        placeholder="Start typing here ..." name="description">{{$pet->description}}</textarea>
                 </div>
                 @error('description')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -151,7 +152,7 @@
                 </button>
                 <button
                     class="bg-indigo-700 rounded hover:bg-indigo-600 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-white lg:max-w-[144px] w-full">
-                    Add Pet
+                    Update Pet
                 </button>
             </div>
         </form>

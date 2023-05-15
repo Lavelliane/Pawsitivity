@@ -11,4 +11,5 @@
     <div class="mt-6 p-4">
         {{$pets->links()}}
     </div>
+    <x-footer />
 </x-layout>

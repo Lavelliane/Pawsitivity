@@ -1,6 +1,6 @@
 <x-layout>
     <!-- Container for demo purpose -->
-    <div class="container my-24 px-6 mx-auto">
+    <div class="container my-24 px-6 mx-auto pb-10">
 
         <!-- Section: Design Block -->
         <section class="mb-32 text-gray-800">
