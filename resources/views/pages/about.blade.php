@@ -26,7 +26,7 @@
             <div class="w-full lg:w-5/12 flex flex-col justify-center">
                 <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-indigo-800 pb-4">Our Story</h1>
                 <p class="font-normal text-base leading-6 text-gray-600">At Pawsitivity, we were founded with a
-                    simple mission: to make a difference in the lives of pets in need. Our founders, [Founder Names],
+                    simple mission: to make a difference in the lives of pets in need. Our founders,
                     were animal lovers from a young age and saw firsthand the impact that pet adoption could have on
                     both pets and their new families. They recognized the need for a platform that could connect pets in
                     need with caring individuals and families in a streamlined and user-friendly way.</p>
